@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0 ;padding: 0;
+        }
+        body{
+            background-image: url(https://ppui-static-pc.cdn.bcebos.com/static/passpc-account/img/reg_bg_min.jpg);
+            background-color: wheat;
+        }
+        #root{
+            margin: 80px auto;
+           width: 450px;
+           height: 605px;
+           background-color: white;
+           border-radius: 20px;
+           opacity: 0.8;
+        }
+        .root-conter{
+            float: left;
+            margin-left: 30px;
+        }
+        .root-conter>h1{
+            margin-top: 50px;
+        }
+        
+        .input{
+            border-radius: 5px;
+            border: 1px solid gray;
+            text-indent: 1em;
+            width: 323px;
+            padding :8px 0px;
+        }
+        .fuck{
+            display: inline-block;
+            width:50px;
+            text-align: center;
+            font-weight: 200;
+            margin-right: 10px;
+        }
+       .root-conter>p:nth-of-type(1){
+            margin-bottom: 60px;
+        }
+        .inputs>p{
+            height: 54px;
+            margin: 20px 0px;
+           
+        }
+        .inputs>p:last-child{
+            margin-top: 40px;
+        }
+        .inputs:nth-last-child(4){
+            width: 200px;
+        }
+       .sb{
+            font-size: 12px;
+            color: #F55;
+            display: none;
+          text-indent: 5em;
+       }
+       .shit{
+           cursor: pointer;
+           font-size: 40px;
+           font-weight: bolder;
+           height: 40px;
+           display: inline-block;
+           background-color: hotpink;
+           line-height: 30px;
+       }
+       .bigo{
+           color: white;
+           line-height: 30px;
+           text-align: center;
+           font-weight: bolder;
+           border-radius: 20px;
+           border: none;
+            background: #BDCEFC;
+           padding: 10px;
+           width: 100%;
+       }
+       .deal{
+            
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+       }
+       .deal>a{
+           text-decoration: none;
+       }
+       .deal>a:hover{
+           text-decoration: underline;
+       }
+       .hint{
+            display: none;
+           position: absolute;
+           left: 60px;
+            top: -40px;
+           border-radius: 5px;
+            padding: 5px;
+           color: white;
+           font-size: 12px;
+           width: 300px;
+           background-color: #000;
+       }
+        .hint2{
+            display: none;
+            top: -70px;
+            right: 0;
+           position: absolute;
+          opacity:0.9;
+           border-radius: 5px;
+            padding: 5px;
+           color: white;
+           font-size: 12px;
+           width: 300px;
+           background-color: #000;
+       }
+       .ico-dis {
+            top: 21px;
+            left: 30px;
+           position: absolute;
+            margin-top: 5px;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            vertical-align: middle;
+            border-width: 6px;
+            border-color: #000 transparent transparent transparent;
+            border-style: solid dashed dotted dashed;
+}
+.ico-dis2 {
+    
+    top: 53px;
+    right: 13px;
+           position: absolute;
+            margin-top: 5px;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            vertical-align: middle;
+            border-width: 6px;
+            border-color: #000 transparent transparent transparent;
+            border-style: solid dashed dotted dashed;
+}
+.user{
+    height: 51px;
+    margin: 20px 0px;
+    position: relative;
+}
+.phone-number{
+    height: 51px;
+    margin: 20px 0px;
+    position: relative;
+}
+.password{
+    height: 51px;
+    margin: 20px 0px;
+    position: relative;
+}
+.shit{user-select:none;
+    width: 100px;
+}
+.new{user-select:none;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div class="root-conter">
+            <h1>欢迎注册</h1>
+            <p style="font-size: 14px; color:#9B9B9B;">已有账号?<a href="#" style="text-decoration: none;color: #2e58ff;">登录</a></p>
+            <div class="inputs">
+              
+            <div class="user">
+                <span class="fuck">用户名</span><input type="text" class="input" placeholder="请设置用户名">
+                <span class="sb">用户名仅支持中英文、数字和下划线,且不能为纯数字</span>
+               <div class="hint">
+                <p >设置后不可更改，中英文均可，最长14英文或7个汉字</p>
+                <i class="ico-dis"></i>
+               </div>
+               
+                
+            </div>
+            <div class="phone-number">
+                <span class="fuck">手机号</span><input type="text" class="input" placeholder="可用于登录和找回密码">
+                <span  class="sb">手机格式不正确</span> 
+           
+            </div>
+            <div class="password"><span class="fuck">密  码</span><input type="text" class="input" placeholder="请设置登录密码">
+                <span class="sb">密码设置不符合要求</span>
+                 <div class="hint2">
+                <p >长度为8~14个字符</p>
+                <p>字母/数字以及标点符号至少包括2种</p>
+                <p>不允许空格、中文</p>
+                <i class="ico-dis2"></i>
+                </div>
+            </div>
+            <p><span class="fuck">验证码</span><input type="text" class="input" placeholder="请输入验证码" style="width: 150px;">
+                <span class="shit">ssss</span>
+                <span class="new">换一张</span>
+                <span class="sb">验证码错误</span>
+            </p>
+            <p>
+                <input type="submit" value="注册" class="bigo" style="cursor: pointer;">
+            </p>        
+                </div>
+                <p class="deal"><input type="checkbox"> 阅读并接受 <a href="#">《百度用户协议》</a>及 <a href="#">《百度隐私权保护声明》</a></p>
+            </div>
+            
+        
+    </div>
+</body>
+<script>
+    let inputs= document.getElementsByClassName('input');
+    console.log(inputs);
+
+    inputs[0].onfocus=function(){
+        document.getElementsByClassName('hint')[0].style.display='block';
+    }
+
+    inputs[2].onfocus=function(){
+        document.getElementsByClassName('hint2')[0].style.display='block';
+    }
+    let i1=false;
+    inputs[0].onblur=function(){
+    console.log(i1);
+        document.getElementsByClassName('hint')[0].style.display='none';
+        console.log(inputs[0].value);
+         var partten=new RegExp('^[a-z-A-Z]{1}([a-z-A-Z0-9]|[._]){4,19}$');
+         if(inputs[0].value!=''){
+            i1=false;
+        if(!partten.test(inputs[0].value)){
+            i1=false;
+            this.style.borderColor='red';
+            document.getElementsByClassName('sb')[0].style.display='block';
+            
+        }else if(partten.test(inputs[0].value)){
+            this.style.borderColor='gray';
+            document.getElementsByClassName('sb')[0].style.display='none';
+            i1=true;
+        }
+        else{
+            this.style.borderColor='gray';
+            document.getElementsByClassName('sb')[0].style.display='none';
+        }
+      }
+      if(i1&&i2&&i3&&i4){
+            document.getElementsByClassName('bigo')[0].style.background='#3f89ec';
+        }else{
+            document.getElementsByClassName('bigo')[0].style.background='#BDCEFC';
+        }
+    }
+    let i2=false;
+    inputs[1].onblur=function(){
+        console.log(i2);
+      
+         var partten=new RegExp('^[1][3,4,5,7,8,9][0-9]{9}$');
+         if(inputs[1].value!=''){
+            i2=false;
+             if(!partten.test(inputs[1].value)){
+                i2=false;
+            this.style.borderColor='red';
+            document.getElementsByClassName('sb')[1].style.display='block';
+            
+        }else if(partten.test(inputs[1].value)){
+            this.style.borderColor='gray';
+            document.getElementsByClassName('sb')[1].style.display='none';
+            i2=true;
+        }
+        else{
+            this.style.borderColor='gray';
+            document.getElementsByClassName('sb')[1].style.display='none';
+        }
+         }
+         if(i1&&i2&&i3&&i4){
+            document.getElementsByClassName('bigo')[0].style.background='#3f89ec';
+        }else{
+            document.getElementsByClassName('bigo')[0].style.background='#BDCEFC';
+        }
+        
+    }
+ let i3 =false;
+    inputs[2].onblur=function(){ 
+        console.log(i3);
+        document.getElementsByClassName('hint2')[0].style.display='none';
+        console.log(inputs[2].value);
+         var partten=new RegExp('^[\\p{Punct}a-zA-Z0-9]{8,14}$');
+         if(inputs[2].value!=''){
+            i3=false;
+             if(!partten.test(inputs[2].value)){
+                 i3=false;
+            this.style.borderColor='red';
+            document.getElementsByClassName('sb')[2].style.display='block';
+            
+        }else if(partten.test(inputs[2].value)){
+            this.style.borderColor='gray';
+            document.getElementsByClassName('sb')[2].style.display='none';
+            i3=true;
+        }else{
+            this.style.borderColor='gray';
+            document.getElementsByClassName('sb')[2].style.display='none';
+        }
+         }
+         if(i1&&i2&&i3&&i4){
+            document.getElementsByClassName('bigo')[0].style.background='#3f89ec';
+        }else{
+            document.getElementsByClassName('bigo')[0].style.background='#BDCEFC';
+        }
+    }
+    
+    let str='';
+    let arr8=[1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'];
+    function mu(){
+        for(let i=0;i<=3;i++){
+         str+=arr8[Math.floor(Math.random()*arr8.length)]
+        }
+    }
+    mu()
+   
+   console.log(inputs[3].value,str);
+   let i4=false;
+   inputs[3].onblur=function(){ 
+       console.log(inputs[3].value==str);
+       if(inputs[3].value!=str){
+            i4=false
+            this.style.borderColor='red';
+            document.getElementsByClassName('sb')[3].style.display='block';
+       }else if(inputs[3].value==str){
+            i4=true
+            this.style.borderColor='gray';
+            document.getElementsByClassName('sb')[3].style.display='none';
+       }
+       if(i1&&i2&&i3&&i4){
+            document.getElementsByClassName('bigo')[0].style.background='#3f89ec';
+        }else{
+            document.getElementsByClassName('bigo')[0].style.background='#BDCEFC';
+        }
+       
+   }
+    document.getElementsByClassName('new')[0].onclick=function(){
+        str=''
+         mu();
+         document.getElementsByClassName('shit')[0].innerHTML=str;
+    }
+        document.getElementsByClassName('shit')[0].innerHTML=str;
+        
+       
+</script>
+</html>
